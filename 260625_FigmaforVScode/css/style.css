@@ -1,0 +1,378 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1280px;
+  height: 5590px;
+}
+
+html {
+  font-family: "Inconsolata", monospace;
+}
+
+/* ========================================
+   アクセシビリティ
+======================================== */
+
+/* visually-hidden：視覚的に非表示だがスクリーンリーダーには読まれるクラス */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+header {
+  display: flex;
+  width: 1216px;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-button {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   コンテナ
+======================================== */
+
+.container {
+  margin: 0 10%;
+  align-items: center;
+}
+
+/* ========================================
+   ヒーロー / ファーストビュー
+======================================== */
+
+.first-img {
+  width: 1280px;
+  height: 700px;
+}
+
+.first-img img {
+  width: 200%;
+  height: 50%;
+}
+
+/* ========================================
+   プロジェクト
+======================================== */
+
+.pj-top {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 118px;
+}
+
+.pj-top-content {
+  display: flex;
+  width: 395px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.pj-number {
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 2px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.pj-txt {
+  align-self: stretch;
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 36px */
+}
+
+.button-more {
+  display: flex;
+  min-width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  cursor: pointer;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 118px;
+}
+
+/* figure 要素になっても見た目は維持 */
+.pj-img {
+  width: 2632px;
+  height: 450px;
+}
+
+.pj-img img {
+  display: flex;
+  justify-content: flex-end;
+  height: 1450px;
+  width: 100vw;
+  margin-right: calc(50%-50vw);
+}
+
+.pj-list {
+  display: inline-flex;
+  max-width: 1010px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 32px 16px;
+  flex-wrap: wrap;
+}
+
+.pj-list > li {
+  min-width: 300px;
+  width: calc(100% - 16px) / 2;
+}
+
+.pj-list-solo {
+  display: flex;
+  min-width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.pj-img-solo {
+  width: 100%;
+  height: 300px;
+}
+
+/* ========================================
+   アバウト
+======================================== */
+
+.about-img {
+  width: 100vw;
+  height: 20px;
+  margin: calc(50% - 50vw);
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.about-img img {
+  width: 100%;
+  height: 50px;
+}
+
+.about-content {
+  display: inline-flex;
+  max-width: 1010px;
+  align-items: flex-start;
+  gap: 118px;
+}
+
+.sub-title {
+}
+
+.about-txt {
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 36px */
+}
+
+.about-list {
+  display: flex;
+  max-width: 1010px;
+  align-items: center;
+  gap: 39px;
+  align-self: stretch;
+}
+
+.about-list_more {
+  display: flex;
+  max-width: 1010px;
+  align-items: center;
+  gap: 39px;
+  align-self: stretch;
+}
+
+.about-number {
+  display: flex;
+  max-width: 1010px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.about-list_more .about-txt {
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 36px */
+}
+
+.about-list_more:nth-child(2) {
+}
+
+/* ========================================
+   ニュース
+======================================== */
+
+.news-list {
+  display: inline-flex;
+  max-width: 1010px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.news-list-solo {
+  max-width: 1010px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.news-list-content {
+  display: flex;
+  max-width: 1010px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.news-pj-number {
+  width: 189.915px;
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pj-title {
+  width: 807.435px;
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 36px */
+}
+
+/* ========================================
+   フッター
+======================================== */
+
+footer {
+  display: flex;
+  max-width: 1215px;
+  align-items: flex-start;
+  gap: 426px;
+}
+
+.footer-left {
+  display: flex;
+  max-width: 497px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 86px;
+}
+
+.footer-title {
+  align-self: stretch;
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-txt {
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 27px */
+}
+
+.footer-menu {
+  display: flex;
+  max-width: 497px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 86px;
+}
+
+.footer-menu a {
+}
+
+.footer-right {
+  display: flex;
+  max-width: 292px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.footer-right nav {
+}
+
+.sns-link {
+  display: flex;
+  max-width: 292px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.sns-name {
+  color: #000;
+  font-family: Ligconsolata;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 27px */
+}
